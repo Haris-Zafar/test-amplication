@@ -8,7 +8,7 @@ export const UserList = (props: ListProps): React.ReactElement => {
       <Datagrid rowClick="show" bulkActionButtons={false}>
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
-        <TextField label="Role" source="role" />
+        <TextField label="Role" source="roles" />
         <DateField source="updatedAt" label="Updated At" />
         <TextField label="Name" source="username" />{" "}
       </Datagrid>

@@ -15,7 +15,7 @@ export const UserEdit = (props: EditProps): React.ReactElement => {
       <SimpleForm>
         <PasswordInput label="Password" source="password" />
         <SelectArrayInput
-          source="role"
+          source="roles"
           choices={ROLES_OPTIONS}
           optionText="label"
           optionValue="value"

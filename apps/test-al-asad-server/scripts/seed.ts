@@ -18,16 +18,9 @@ if (require.main === module) {
     console.error(error);
     process.exit(1);
   });
-
-  const salt = parseSalt(BCRYPT_SALT);
-
-  seed(salt).catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
 }
 
-async function seed(bcryptSalt: Salt, bcryptSalt: Salt) {
+async function seed(bcryptSalt: Salt) {
   console.info("Seeding database...");
 
   const client = new PrismaClient();
@@ -47,22 +40,10 @@ async function seed(bcryptSalt: Salt, bcryptSalt: Salt) {
     create: data,
   });
 
-  const data = {
-    username: "admin",
-    password: await hash("admin", bcryptSalt),
-    roles: ["user"],
-  };
-
-  await client.user.upsert({
-    where: {
-      username: data.username,
-    },
-
-    update: {},
-    create: data,
-  });
-
   void client.$disconnect();
 
   console.info("Seeding database with custom seed...");
+  customSeed();
+
+  console.info("Seeded database successfully");
 }
