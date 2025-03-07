@@ -33,7 +33,7 @@ export class UserControllerBase {
       select: {
         createdAt: true,
         id: true,
-        role: true,
+        roles: true,
         updatedAt: true,
         username: true,
       },
@@ -50,7 +50,7 @@ export class UserControllerBase {
       select: {
         createdAt: true,
         id: true,
-        role: true,
+        roles: true,
         updatedAt: true,
         username: true,
       },
@@ -68,7 +68,7 @@ export class UserControllerBase {
       select: {
         createdAt: true,
         id: true,
-        role: true,
+        roles: true,
         updatedAt: true,
         username: true,
       },
@@ -95,7 +95,7 @@ export class UserControllerBase {
         select: {
           createdAt: true,
           id: true,
-          role: true,
+          roles: true,
           updatedAt: true,
           username: true,
         },
@@ -122,7 +122,7 @@ export class UserControllerBase {
         select: {
           createdAt: true,
           id: true,
-          role: true,
+          roles: true,
           updatedAt: true,
           username: true,
         },

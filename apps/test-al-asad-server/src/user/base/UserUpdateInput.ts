@@ -37,7 +37,7 @@ class UserUpdateInput {
   @Field(() => GraphQLJSON, {
     nullable: true,
   })
-  role?: InputJsonValue;
+  roles?: InputJsonValue;
 
   @ApiProperty({
     required: false,
