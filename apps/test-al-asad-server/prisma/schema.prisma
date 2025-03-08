@@ -265,7 +265,7 @@ model User {
   createdAt DateTime @default(now())
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   password  String?
-  roles     Json
+  role      Json
   updatedAt DateTime @updatedAt
   username  String   @unique
 }

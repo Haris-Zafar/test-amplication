@@ -43,7 +43,7 @@ class User {
   @Field(() => GraphQLJSON, {
     nullable: true,
   })
-  roles!: JsonValue;
+  role!: JsonValue;
 
   @ApiProperty({
     required: true,

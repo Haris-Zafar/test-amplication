@@ -2,6 +2,6 @@ import { InputJsonValue } from "../../types";
 
 export type UserUpdateInput = {
   password?: string | null;
-  roles?: InputJsonValue;
+  role?: InputJsonValue;
   username?: string;
 };
