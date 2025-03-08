@@ -30,14 +30,11 @@ class UserCreateInput {
   password?: string | null;
 
   @ApiProperty({
-    required: false,
+    required: true,
   })
   @IsJSONValue()
-  @IsOptional()
-  @Field(() => GraphQLJSON, {
-    nullable: true,
-  })
-  role?: InputJsonValue;
+  @Field(() => GraphQLJSON)
+  role!: InputJsonValue;
 
   @ApiProperty({
     required: true,
